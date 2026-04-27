@@ -1,0 +1,13 @@
+{
+  "name": "com.olivegamestudio.unitytoolkit",
+  "version": "1.0.0",
+  "displayName": "Unity Toolkit",
+  "description": "Shared Unity runtime toolkit package with runtime and test assemblies.",
+  "documentationUrl": "https://github.com/olivegamestudio/UnityToolkit",
+  "unity": "2021.3",
+  "author": {
+    "name": "Olive Game Studio",
+    "url": "https://github.com/olivegamestudio"
+  },
+  "license": "MIT"
+}
