@@ -26,7 +26,7 @@ https://github.com/olivegamestudio/UnityToolkit.git?path=/upm
 ## Package
 
 - Package id: `com.olivegamestudio.unitytoolkit`
-- Version: `1.0.0`
+- Version: `1.0.1`
 - Unity version: `2021.3`
 
 ## Structure
