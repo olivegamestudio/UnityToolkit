@@ -7,7 +7,7 @@ Shared Unity runtime components and helpers for general Unity projects.
 Current runtime scripts in the package:
 
 - `CameraShake`
-- `CameraShakeZone`
+- `CameraShakeZone` with radius-based trigger filtering, layer masks, optional tag filtering, and trauma application.
 - `SoftSway`
 
 ## Install into Unity
@@ -26,7 +26,7 @@ https://github.com/olivegamestudio/UnityToolkit.git?path=/upm
 ## Package
 
 - Package id: `com.olivegamestudio.unitytoolkit`
-- Version: `1.0.1`
+- Version: `1.0.2`
 - Unity version: `2021.3`
 
 ## Structure

@@ -3,7 +3,7 @@
 Shared Unity runtime helpers. Current contents:
 
 - `CameraShake` for camera shake behaviour.
-- `CameraShakeZone` for trigger-based shake activation.
+- `CameraShakeZone` for trigger-based shake activation with radius, layer filtering, optional tag filtering, and trauma application.
 - `SoftSway` for lightweight sway motion.
 
 To include it in the Unity Editor:

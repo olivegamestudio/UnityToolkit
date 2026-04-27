@@ -5,28 +5,63 @@ using UnityEditor;
 #endif
 
 [RequireComponent(typeof(CircleCollider2D))]
+[DisallowMultipleComponent]
 public class CameraShakeZone : MonoBehaviour
 {
-    [SerializeField] private float Distance = 3f;
+    [SerializeField, Min(0f)] private float Radius = 3f;
     [SerializeField] private CameraShake cameraShake;
-    [SerializeField] private float trauma;
+    [SerializeField, Min(0f)] private float trauma;
+    [SerializeField] private LayerMask triggerLayers = ~0;
+    [SerializeField] private string requiredTag;
+    
+    CircleCollider2D _collider;
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("QuestZoneBehaviourBase.OnTriggerEnter2D " + other.name);
-        
-        QuestPlayer questPlayer = other.GetComponentInParent<QuestPlayer>();
-        if (questPlayer != null)
+        if (!IsValidTrigger(other))
         {
-            cameraShake.AddTrauma(trauma);
+            return;
         }
+
+        cameraShake?.AddTrauma(trauma);
     }
 
+    bool IsValidTrigger(Collider2D other)
+    {
+        if (((1 << other.gameObject.layer) & triggerLayers) == 0)
+        {
+            return false;
+        }
+
+        if (!string.IsNullOrWhiteSpace(requiredTag) && !other.CompareTag(requiredTag))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    void Awake()
+    {
+        _collider = GetComponent<CircleCollider2D>();
+        ApplyColliderSettings();
+    }
+    
     void OnValidate()
     {
-        CircleCollider2D collider = GetComponent<CircleCollider2D>();
-        collider.radius = Distance;
-        collider.isTrigger = true;
+        _collider = GetComponent<CircleCollider2D>();
+        ApplyColliderSettings();
+    }
+    
+    void ApplyColliderSettings()
+    {
+        if (_collider == null)
+        {
+            return;
+        }
+
+        _collider.radius = Radius;
+        _collider.isTrigger = true;
     }
     
     void OnDrawGizmos() => DrawGizmo(Color.white);
@@ -36,7 +71,7 @@ public class CameraShakeZone : MonoBehaviour
     void DrawGizmo(Color color)
     {
         Gizmos.color = color;
-        Gizmos.DrawWireSphere(transform.position, Distance);
+        Gizmos.DrawWireSphere(transform.position, Radius);
         
 #if UNITY_EDITOR
         Handles.Label(transform.position + new Vector3(1, 0, 0), gameObject.name);
