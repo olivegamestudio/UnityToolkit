@@ -8,6 +8,9 @@ Current runtime scripts in the package:
 
 - `CameraShake`
 - `CameraShakeZone` with radius-based trigger filtering, layer masks, optional tag filtering, and trauma application.
+- `CameraLinearZoomIn`
+- `CameraTrackWithGameObject`
+- `CameraTrackWithRotationGameObject`
 - `SoftSway`
 
 ## Install into Unity
@@ -26,7 +29,7 @@ https://github.com/olivegamestudio/UnityToolkit.git?path=/upm
 ## Package
 
 - Package id: `com.olivegamestudio.unitytoolkit`
-- Version: `1.0.2`
+- Version: `1.0.3`
 - Unity version: `2021.3`
 
 ## Structure

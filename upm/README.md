@@ -4,6 +4,9 @@ Shared Unity runtime helpers. Current contents:
 
 - `CameraShake` for camera shake behaviour.
 - `CameraShakeZone` for trigger-based shake activation with radius, layer filtering, optional tag filtering, and trauma application.
+- `CameraLinearZoomIn` for steady camera zoom progression.
+- `CameraTrackWithGameObject` for following a target transform.
+- `CameraTrackWithRotationGameObject` for following a target transform and rotation.
 - `SoftSway` for lightweight sway motion.
 
 To include it in the Unity Editor:
