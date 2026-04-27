@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace OliveGame.UnityKit.Camera;
-
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Camera))]
 public sealed class OrthographicCameraSizeTween : MonoBehaviour

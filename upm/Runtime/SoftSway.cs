@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public sealed class SpotlightSoftSway : MonoBehaviour
+[DisallowMultipleComponent]
+public sealed class SoftSway : MonoBehaviour
 {
     [SerializeField] private float maxAngle = 8f;
     [SerializeField] private float frequency = 0.5f;
