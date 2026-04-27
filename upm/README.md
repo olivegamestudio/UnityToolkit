@@ -4,9 +4,10 @@ Shared Unity runtime helpers. Current contents:
 
 - `CameraShake` for camera shake behaviour.
 - `CameraShakeZone` for trigger-based shake activation with radius, layer filtering, optional tag filtering, and trauma application.
-- `CameraLinearZoomIn` for steady camera zoom progression.
 - `CameraTrackWithGameObject` for following a target transform.
 - `CameraTrackWithRotationGameObject` for following a target transform and rotation.
+- `OrthographicCameraSizeTween` for curve-driven orthographic size tweening.
+- `OrthographicCameraZoom` for direct orthographic zoom playback between start and end sizes.
 - `SoftSway` for lightweight sway motion.
 
 To include it in the Unity Editor:

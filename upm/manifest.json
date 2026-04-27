@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "com.olivegamestudio.unitytoolkit": "https://github.com/olivegamestudio/UnityToolkit.git?path=upm#v1.0.3"
+    "com.olivegamestudio.unitytoolkit": "https://github.com/olivegamestudio/UnityToolkit.git?path=upm#v1.0.4"
   }
 }
