@@ -8,6 +8,7 @@ Shared Unity runtime helpers. Current contents:
 - `CameraTrackWithRotationGameObject` for following a target transform and rotation.
 - `OrthographicCameraSizeTween` for curve-driven orthographic size tweening.
 - `OrthographicCameraZoom` for direct orthographic zoom playback between start and end sizes.
+- `RelativePositionWithCamera` for keeping an object at a fixed offset relative to a camera.
 - `SoftSway` for lightweight sway motion.
 
 To include it in the Unity Editor:
